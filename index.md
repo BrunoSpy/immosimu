@@ -14,6 +14,12 @@ title: Simulateur capacité emprunt / mensualité
 </div>
 
 <div class="form-group range-wrap">
+<label for="formDuration">Durée du prêt</label>
+<input type="range" class="form-control-range" id="formDuration" min="5" max="20" step="1">
+<output class="bubble"></output>
+</div>
+
+<div class="form-group range-wrap">
 <label for="formAssurRate">Taux assurance prết</label>
 <input type="range" class="form-control-range" id="formAssurRate" min="0" max="1" step="0.1">
 <output class="bubble"></output>
@@ -66,6 +72,7 @@ title: Simulateur capacité emprunt / mensualité
 </tr>
 <tr><td>Mensualité assurance</td><td><span id="monthAssur"></span></td></tr>
 <tr><td>Mensualité totale</td><td><span id="total"></span></td></tr>
+<tr><td>Coût du prêt (hors assurance)</td><td><span id="cost"></span></td></tr>
 </table>
 
 </div>

@@ -8,6 +8,7 @@ $(document).ready(function() {
     $("#formVoitures").val("100000");
     $("#formRachat").val("450000");
     $("#formApport").val("20000");
+    $("#formDuration").val("15");
 
     const allRanges = document.querySelectorAll(".range-wrap");
     allRanges.forEach(wrap => {
@@ -42,6 +43,7 @@ $(document).ready(function() {
             let assurVoitures = parseFloat($("#formAssurVoitures").val());
             let achat = parseFloat($("#formAchat").val());
             let apport = parseFloat($("#formApport").val());
+            let duration = parseFloat($("#formDuration").val());
 
             //frais de notaires : ~7% + 5000 caution et dossier
             let achatNet = achat * 1.07 + 5000;
@@ -51,9 +53,13 @@ $(document).ready(function() {
             let t = rate/100;
 
             //sur 15 ans
-            let mensualite = (montantEmprunt * t/12)/(1 - Math.pow(1+t/12, -12 * 15));
+            let mensualite = (montantEmprunt * t/12)/(1 - Math.pow(1+t/12, -12 * duration));
+
+            let cost = 12 * duration * mensualite - montantEmprunt;
 
             let mensualiteAssur = (montantEmprunt * assurRate/100)/12;
+
+            $("#cost").text(cost.toFixed(0));
 
             $("#montant").text(montantEmprunt.toFixed(0));
 
