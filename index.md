@@ -33,7 +33,7 @@ title: Simulateur capacité emprunt / mensualité
 
 <div class="form-group range-wrap">
 <label for="formRachat">Montant rachat prêt</label>
-<input type="range" class="form-control-range" id="formRachat" min="350000" max="450000" step="5000">
+<input type="range" class="form-control-range" id="formRachat" min="370000" max="470000" step="5000">
 <output class="bubble"></output>
 </div>
 
