@@ -67,6 +67,12 @@ $(document).ready(function() {
 
             $("#monthAssur").text(mensualiteAssur.toFixed(0));
 
+            if(mensualite+mensualiteAssur+assurVoitures > 2400) {
+                $("#trTotal").removeClass("bg-success").addClass("bg-danger text-white ");
+            } else {
+                $("#trTotal").addClass("bg-success").removeClass("bg-danger text-white ");
+            }
+
             $("#total").text((mensualite+mensualiteAssur+assurVoitures).toFixed(0));
 
     }
