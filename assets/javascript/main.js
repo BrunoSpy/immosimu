@@ -4,8 +4,8 @@ $(document).ready(function() {
     //default values
     $("#formRate").val("1.1");
     $("#formAssurRate").val("0.3");
-    $("#formAssurVoitures").val("190");
-    $("#formVoitures").val("100000");
+    $("#formAssurVoitures").val("120");
+    $("#formVoitures").val("60000");
     $("#formRachat").val("460000");
     $("#formApport").val("20000");
     $("#formDuration").val("15");
