@@ -73,6 +73,7 @@ title: Simulateur capacité emprunt / mensualité
 <tr><td>Mensualité assurance</td><td><span id="monthAssur"></span></td></tr>
 <tr id="trTotal"><td>Mensualité totale</td><td><span id="total"></span></td></tr>
 <tr><td>Coût du prêt (hors assurance)</td><td><span id="cost"></span></td></tr>
+  <tr><td>Apport total</td><td><span id="apporttotal"></span></td></tr>
 </table>
 
 </div>
