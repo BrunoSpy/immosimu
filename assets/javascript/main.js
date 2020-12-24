@@ -50,6 +50,8 @@ $(document).ready(function() {
 
             let montantEmprunt = achatNet - (vente - rachat) + voitures - apport;
 
+            let apportTotal = apport + vente - rachat - voitures;
+        
             let t = rate/100;
 
             //sur 15 ans
@@ -66,6 +68,8 @@ $(document).ready(function() {
             $("#result").text(mensualite.toFixed(0));
 
             $("#monthAssur").text(mensualiteAssur.toFixed(0));
+        
+            $("#apporttotal").text(apportTotal.toFixed(0));
 
             if(mensualite+mensualiteAssur+assurVoitures > 2400) {
                 $("#trTotal").removeClass("bg-success").addClass("bg-danger text-white ");
