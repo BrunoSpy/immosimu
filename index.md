@@ -39,7 +39,7 @@ title: Simulateur capacité emprunt / mensualité
 
 <div class="form-group range-wrap">
 <label for="formVoitures">Montant achat voitures</label>
-<input type="range" class="form-control-range" id="formVoitures" min="50000" max="100000" step="1000">
+<input type="range" class="form-control-range" id="formVoitures" min="0" max="100000" step="1000">
 <output class="bubble"></output>
 </div>
 
