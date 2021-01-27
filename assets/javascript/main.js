@@ -46,7 +46,7 @@ $(document).ready(function() {
             let duration = parseFloat($("#formDuration").val());
 
             //frais de notaires : ~7% + 5000 caution et dossier
-            let achatNet = achat * 1.07 + 5000;
+            let achatNet = achat * 1.072 + 5000;
 
             let montantEmprunt = achatNet - (vente - rachat) + voitures - apport;
 
