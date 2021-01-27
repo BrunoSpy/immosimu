@@ -61,6 +61,8 @@ $(document).ready(function() {
 
             let mensualiteAssur = (montantEmprunt * assurRate/100)/12;
 
+            let totalAssur = mensualiteAssur * 12 * duration;
+        
             $("#cost").text(cost.toFixed(0));
 
             $("#montant").text(montantEmprunt.toFixed(0));
@@ -68,6 +70,8 @@ $(document).ready(function() {
             $("#result").text(mensualite.toFixed(0));
 
             $("#monthAssur").text(mensualiteAssur.toFixed(0));
+        
+            $("#totalAssur").text(totalAssur.toFixed(0));
         
             $("#apporttotal").text(apportTotal.toFixed(0));
 
