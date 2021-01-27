@@ -2,12 +2,12 @@
 $(document).ready(function() {
 
     //default values
-    $("#formRate").val("1.1");
+    $("#formRate").val("0.8");
     $("#formAssurRate").val("0.3");
     $("#formAssurVoitures").val("120");
-    $("#formVoitures").val("60000");
+    $("#formVoitures").val("55000");
     $("#formRachat").val("460000");
-    $("#formApport").val("20000");
+    $("#formApport").val("60000");
     $("#formDuration").val("15");
 
     const allRanges = document.querySelectorAll(".range-wrap");
