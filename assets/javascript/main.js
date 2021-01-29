@@ -5,7 +5,7 @@ $(document).ready(function() {
     $("#formRate").val("0.8");
     $("#formAssurRate").val("0.3");
     $("#formAssurVoitures").val("120");
-    $("#formVoitures").val("55000");
+    $("#formVoitures").val("52700");
     $("#formRachat").val("460000");
     $("#formApport").val("60000");
     $("#formDuration").val("15");
