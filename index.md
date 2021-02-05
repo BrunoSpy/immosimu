@@ -38,7 +38,7 @@ title: Simulateur capacité emprunt / mensualité
 </div>
 
 <div class="form-group range-wrap">
-<label for="formVoitures">Montant achat voitures</label>
+<label for="formVoitures">Montant de la vente non réinvesti</label>
 <input type="range" class="form-control-range" id="formVoitures" min="0" max="60000" step="100">
 <output class="bubble"></output>
 </div>
@@ -51,7 +51,7 @@ title: Simulateur capacité emprunt / mensualité
 
 <div class="form-group range-wrap">
 <label for="formAchat">Montant achat (sans frais de notaire)</label>
-<input type="range" class="form-control-range" id="formAchat" min="400000" max="650000" step="5000">
+<input type="range" class="form-control-range" id="formAchat" min="400000" max="650000" step="1000">
 <output class="bubble"></output>
 </div>
 
