@@ -4,18 +4,17 @@ $(document).ready(function() {
     //default values
     $("#formRate").val("0.8");
     $("#formAssurRate").val("0.3");
-    $("#formAssurVoitures").val("120");
-    $("#formVoitures").val("15000");
-    $("#formRachat").val("460000");
-    $("#formApport").val("0");
+    $("#formVoitures").val("0");
+    $("#formRachat").val("0");
+    $("#formApport").val("50000");
     $("#formDuration").val("15");
     $("#formCaution").val('5000');
+    $("#formVente").val('0');
 
     const allRanges = document.querySelectorAll(".range-wrap");
     allRanges.forEach(wrap => {
         const range = wrap.querySelector(".form-control-range");
         const bubble = wrap.querySelector(".bubble");
-
         range.addEventListener("input", () => {
             setBubble(range, bubble);
             compute();
@@ -29,7 +28,13 @@ $(document).ready(function() {
         const min = range.min ? range.min : 0;
         const max = range.max ? range.max : 100;
         const newVal = Number(((val - min) * 100) / (max - min));
-        bubble.innerHTML = val;
+
+        let trailing = $(bubble).data('trailing');
+        if(typeof trailing == "undefined") {
+            trailing = "";
+        }
+
+        bubble.innerHTML = val + ' ' + trailing;
 
         // Sorta magic numbers based on size of the native UI thumb
         bubble.style.left = `calc(${newVal}% + (${8 - newVal * 0.15}px))`;
@@ -41,7 +46,6 @@ $(document).ready(function() {
             let vente = parseFloat($("#formVente").val());
             let rachat = parseFloat($("#formRachat").val());
             let voitures = parseFloat($("#formVoitures").val());
-            let assurVoitures = parseFloat($("#formAssurVoitures").val());
             let achat = parseFloat($("#formAchat").val());
             let apport = parseFloat($("#formApport").val());
             let duration = parseFloat($("#formDuration").val());
@@ -77,13 +81,9 @@ $(document).ready(function() {
         
             $("#apporttotal").text(apportTotal.toFixed(0));
 
-            if(mensualite+mensualiteAssur+assurVoitures > 2400) {
-                $("#trTotal").removeClass("bg-success").addClass("bg-danger text-white ");
-            } else {
-                $("#trTotal").addClass("bg-success").removeClass("bg-danger text-white ");
-            }
+            $("#trTotal").addClass("bg-success");
 
-            $("#total").text((mensualite+mensualiteAssur+assurVoitures).toFixed(0));
+            $("#total").text((mensualite+mensualiteAssur).toFixed(0));
 
     }
 
