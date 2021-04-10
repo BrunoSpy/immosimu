@@ -20,7 +20,7 @@ title: Simulateur capacité emprunt / mensualité
 </div>
 
 <div class="form-group range-wrap">
-<label for="formAssurRate">Taux assurance prết<sup>1</sup></label>
+<label for="formAssurRate">Taux assurance prêt<sup>1</sup></label>
 <input type="range" class="form-control-range" id="formAssurRate" min="0" max="1" step="0.05">
 <output class="bubble"></output>
 </div>
@@ -33,13 +33,13 @@ title: Simulateur capacité emprunt / mensualité
 
 <div class="form-group range-wrap">
 <label for="formRachat">Montant rachat prêt</label>
-<input type="range" class="form-control-range" id="formRachat" min="370000" max="470000" step="5000">
+<input type="range" class="form-control-range" id="formRachat" min="370000" max="470000" step="1000">
 <output class="bubble"></output>
 </div>
 
 <div class="form-group range-wrap">
-<label for="formVoitures">Montant achat voitures</label>
-<input type="range" class="form-control-range" id="formVoitures" min="50000" max="100000" step="1000">
+<label for="formVoitures">Montant de la vente non réinvesti</label>
+<input type="range" class="form-control-range" id="formVoitures" min="0" max="60000" step="100">
 <output class="bubble"></output>
 </div>
 
@@ -51,7 +51,7 @@ title: Simulateur capacité emprunt / mensualité
 
 <div class="form-group range-wrap">
 <label for="formAchat">Montant achat (sans frais de notaire)</label>
-<input type="range" class="form-control-range" id="formAchat" min="400000" max="650000" step="5000">
+<input type="range" class="form-control-range" id="formAchat" min="400000" max="650000" step="1000">
 <output class="bubble"></output>
 </div>
 
@@ -72,13 +72,12 @@ title: Simulateur capacité emprunt / mensualité
 <div class="col">
 <h2>Résultat</h2>
 <table class="table">
-<tr><td>Montant à emprunter</td><td><span id="montant"></span></td></tr>
-<tr>
-<td>Mensualité emprunt</td><td><span id="result"></span></td>
-</tr>
-<tr><td>Mensualité assurance</td><td><span id="monthAssur"></span></td></tr>
-<tr id="trTotal"><td>Mensualité totale</td><td><span id="total"></span></td></tr>
-<tr><td>Coût du prêt (hors assurance)</td><td><span id="cost"></span></td></tr>
+  <tr><td>Montant à emprunter</td><td><span id="montant"></span></td></tr>
+  <tr><td>Mensualité emprunt</td><td><span id="result"></span></td></tr>
+  <tr><td>Mensualité assurance</td><td><span id="monthAssur"></span></td></tr>
+  <tr id="trTotal"><td>Mensualité totale</td><td><span id="total"></span></td></tr>
+  <tr><td>Coût du prêt (hors assurance)</td><td><span id="cost"></span></td></tr>
+  <tr><td>Coût assurance du prêt</td><td><span id="totalAssur"></span></td></tr>
   <tr><td>Apport total</td><td><span id="apporttotal"></span></td></tr>
 </table>
 

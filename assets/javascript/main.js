@@ -2,12 +2,12 @@
 $(document).ready(function() {
 
     //default values
-    $("#formRate").val("1.1");
+    $("#formRate").val("0.8");
     $("#formAssurRate").val("0.3");
     $("#formAssurVoitures").val("120");
-    $("#formVoitures").val("60000");
+    $("#formVoitures").val("15000");
     $("#formRachat").val("460000");
-    $("#formApport").val("20000");
+    $("#formApport").val("0");
     $("#formDuration").val("15");
     $("#formCaution").val('5000');
 
@@ -63,6 +63,8 @@ $(document).ready(function() {
 
             let mensualiteAssur = (montantEmprunt * assurRate/100)/12;
 
+            let totalAssur = mensualiteAssur * 12 * duration;
+        
             $("#cost").text(cost.toFixed(0));
 
             $("#montant").text(montantEmprunt.toFixed(0));
@@ -70,6 +72,8 @@ $(document).ready(function() {
             $("#result").text(mensualite.toFixed(0));
 
             $("#monthAssur").text(mensualiteAssur.toFixed(0));
+        
+            $("#totalAssur").text(totalAssur.toFixed(0));
         
             $("#apporttotal").text(apportTotal.toFixed(0));
 
