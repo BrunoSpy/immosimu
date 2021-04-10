@@ -9,6 +9,7 @@ $(document).ready(function() {
     $("#formRachat").val("460000");
     $("#formApport").val("20000");
     $("#formDuration").val("15");
+    $("#formCaution").val('5000');
 
     const allRanges = document.querySelectorAll(".range-wrap");
     allRanges.forEach(wrap => {
@@ -44,9 +45,10 @@ $(document).ready(function() {
             let achat = parseFloat($("#formAchat").val());
             let apport = parseFloat($("#formApport").val());
             let duration = parseFloat($("#formDuration").val());
+            let caution = parseFloat($('#formCaution').val());
 
             //frais de notaires : ~7% + 5000 caution et dossier
-            let achatNet = achat * 1.07 + 5000;
+            let achatNet = achat * 1.07 + caution;
 
             let montantEmprunt = achatNet - (vente - rachat) + voitures - apport;
 

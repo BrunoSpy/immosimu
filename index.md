@@ -9,7 +9,7 @@ title: Simulateur capacité emprunt / mensualité
 <form>
 <div class="form-group range-wrap">
 <label for="formRate">Taux du prêt</label>
-<input type="range" class="form-control-range" id="formRate" min="0" max="2" step="0.1">
+<input type="range" class="form-control-range" id="formRate" min="0" max="2" step="0.01">
 <output class="bubble"></output>
 </div>
 
@@ -20,8 +20,8 @@ title: Simulateur capacité emprunt / mensualité
 </div>
 
 <div class="form-group range-wrap">
-<label for="formAssurRate">Taux assurance prết</label>
-<input type="range" class="form-control-range" id="formAssurRate" min="0" max="1" step="0.1">
+<label for="formAssurRate">Taux assurance prết<sup>1</sup></label>
+<input type="range" class="form-control-range" id="formAssurRate" min="0" max="1" step="0.05">
 <output class="bubble"></output>
 </div>
 
@@ -56,6 +56,12 @@ title: Simulateur capacité emprunt / mensualité
 </div>
 
 <div class="form-group range-wrap">
+<label for="formAchat">Cautionnement</label>
+<input type="range" class="form-control-range" id="formCaution" min="0000" max="15000" step="500">
+<output class="bubble"></output>
+</div>
+
+<div class="form-group range-wrap">
 <label for="formApport">Apport</label>
 <input type="range" class="form-control-range" id="formApport" min="0" max="100000" step="5000">
 <output class="bubble"></output>
@@ -78,4 +84,5 @@ title: Simulateur capacité emprunt / mensualité
 
 </div>
 </div>
+<p><sup>1</sup> : Taux moyen d'assurance annuel en pourcentage du capital initial assuré</p>
 </div>
