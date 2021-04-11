@@ -23,7 +23,7 @@ title: Simulateur capacité emprunt / mensualité
 
 <div class="form-group range-wrap">
 <label for="formApport">Apport</label>
-<input type="range" class="form-control-range" id="formApport" min="0" max="200000" step="5000">
+<input type="range" class="form-control-range" id="formApport" min="0" max="400000" step="5000">
 <output class="bubble" data-trailing="€"></output>
 </div>
 </div>
